@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This sitemap was dynamically generated on 21 octubre, 2024 at 2:44 pm by All in One SEO v4.7.3 - the original SEO plugin for WordPress. -->
+<!-- This sitemap was dynamically generated on 21 octubre, 2024 at 4:20 pm by All in One SEO v4.7.3 - the original SEO plugin for WordPress. -->
 
-<?xml-stylesheet type="text/xsl" href="/default-sitemap.xsl?sitemap=templately_library"?>
+<?xml-stylesheet type="text/xsl" href="./default-sitemap.xsl?sitemap=templately_library"?>
 <urlset
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 	xmlns:xhtml="http://www.w3.org/1999/xhtml"
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
 	<url>
-		<loc><![CDATA[/?templately_library=elemusic-footer%5D%5D%3E</loc>
-		<lastmod><![CDATA[2024-10-17T19:02:35+00:00]]></lastmod>
+		<loc><![CDATA[./index.html?templately_library=elemusic-footer%5D%5D%3E</loc>
+		<lastmod><![CDATA[2024-10-21T20:47:24+00:00]]></lastmod>
 		<changefreq><![CDATA[weekly]]></changefreq>
 		<priority><![CDATA[0.7]]></priority>
 		<image:image>
-			<image:loc><![CDATA[/wp-content/uploads/2024/10/MAOMA-160-100-px-8.png]]></image:loc>
+			<image:loc><![CDATA[./wp-content/uploads/2024/10/MAOMA-160-100-px-8.png]]></image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc><![CDATA[/?templately_library=elemusic-header%5D%5D%3E</loc>
+		<loc><![CDATA[./index.html?templately_library=elemusic-header%5D%5D%3E</loc>
 		<lastmod><![CDATA[2024-10-17T18:51:37+00:00]]></lastmod>
 		<changefreq><![CDATA[weekly]]></changefreq>
 		<priority><![CDATA[0.7]]></priority>
 	</url>
 	<url>
-		<loc><![CDATA[/?templately_library=page-not-found%5D%5D%3E</loc>
+		<loc><![CDATA[./index.html?templately_library=page-not-found%5D%5D%3E</loc>
 		<lastmod><![CDATA[2024-10-13T04:24:32+00:00]]></lastmod>
 		<changefreq><![CDATA[weekly]]></changefreq>
 		<priority><![CDATA[0.7]]></priority>
 	</url>
 	<url>
-		<loc><![CDATA[/?templately_library=politicas-de-privacidad%5D%5D%3E</loc>
+		<loc><![CDATA[./index.html?templately_library=politicas-de-privacidad%5D%5D%3E</loc>
 		<lastmod><![CDATA[2024-10-12T18:46:00+00:00]]></lastmod>
 		<changefreq><![CDATA[weekly]]></changefreq>
 		<priority><![CDATA[0.7]]></priority>
 	</url>
 	<url>
-		<loc><![CDATA[/?templately_library=single-page-by-templately-2%5D%5D%3E</loc>
+		<loc><![CDATA[./index.html?templately_library=single-page-by-templately-2%5D%5D%3E</loc>
 		<lastmod><![CDATA[2024-10-11T22:43:39+00:00]]></lastmod>
 		<changefreq><![CDATA[weekly]]></changefreq>
 		<priority><![CDATA[0.7]]></priority>
