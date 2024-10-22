@@ -531,7 +531,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                                                                                                 <p>Dale un toque especial a tu evento con un artista que aporta profesionalismo. Ofrecemos música en vivo que incluye baladas, boleros, pop latino y rock en español, con opciones de guitarra y pistas o un músico acompañante.</p>
 <p> </p>                                                                            </div>
             </div>
-
 				</div>
 				</div>
 					</div>
@@ -581,50 +580,101 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 			</div>
 		</section>
-		<div id="video-popup" style="display: none; position: fixed; z-index: 999999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center;">
-			<span id="close-btn" style="color: #fff; position: absolute; top: 12px; right: 13px; font-size: 28px; font-weight: bold; cursor: pointer;">
-				<svg width="33px" height="33px" viewBox="-2.4 -2.4 28.80 28.80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#dedede" stroke="#dedede"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Close</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Close"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="25" height="25"> </rect> <line x1="16.9999" y1="7" x2="7.00001" y2="16.9999" id="Path" stroke="#ededed" stroke-width="2" stroke-linecap="round"> </line> <line x1="7.00006" y1="7" x2="17" y2="16.9999" id="Path" stroke="#ededed" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
-			</span>
-			<div style="background-color: transparent; padding: 0; border: none; width: 100%; height: 90%; position: relative;">
-				<iframe id="video-iframe" width="100%" height="100%" src="https://www.youtube.com/embed/TyZ98bksLuo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		</div>
-		
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				var popup = document.getElementById('video-popup');
-				var thumbnail = document.getElementById('video-thumbnail');
-				var closeBtn = document.getElementById('close-btn');
-				var iframe = document.getElementById('video-iframe');
-				var videoSrc = iframe.src;
-		
-				thumbnail.onclick = function () {
-					popup.style.display = 'flex';
-					document.body.style.overflow = 'auto';
-				}
-		
-				closeBtn.onclick = function () {
-					popup.style.display = 'none';
-					document.body.style.overflow = 'auto';
-					iframe.src = '';
-					setTimeout(function() {
-						iframe.src = videoSrc;
-					}, 100);
-				}
-		
-				window.onclick = function (event) {
-					if (event.target == popup) {
-						popup.style.display = 'none';
-						document.body.style.overflow = 'auto';
-						iframe.src = '';
-						setTimeout(function() {
-							iframe.src = videoSrc;
-						}, 100);
-					}
-				}
-			});
-		</script>
-	
+		<div id="video-popup" class="zoom-in" style="position: fixed; z-index: 999999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center;">
+		<div id="close-btn" style="color: #fff; position: absolute; top: 12px; right: 13px; font-size: 28px; font-weight: bold; cursor: pointer;">
+        <svg width="33px" height="33px" viewBox="-2.4 -2.4 28.80 28.80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#dedede" stroke="#dedede">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <title>Close</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Close">
+                        <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="25" height="25"></rect>
+                        <line x1="16.9999" y1="7" x2="7.00001" y2="16.9999" id="Path" stroke="#ededed" stroke-width="2" stroke-linecap="round"></line>
+                        <line x1="7.00006" y1="7" x2="17" y2="16.9999" id="Path" stroke="#ededed" stroke-width="2" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div style="background-color: transparent; padding: 0; border: none; width: 100%; height: 90%; position: relative;">
+        <iframe id="video-iframe" width="100%" height="100%" src="https://www.youtube.com/embed/TyZ98bksLuo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var popup = document.getElementById('video-popup');
+        var thumbnail = document.getElementById('video-thumbnail');
+        var closeBtn = document.getElementById('close-btn');
+        var iframe = document.getElementById('video-iframe');
+        var videoSrc = iframe.src;
+
+        thumbnail.onclick = function () {
+            popup.style.display = 'flex';
+            popup.classList.add('fade-in');
+            popup.classList.remove('fade-out');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeBtn.onclick = function () {
+            popup.classList.remove('fade-in');
+            popup.classList.add('fade-out');
+            setTimeout(function() {
+                popup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                iframe.src = '';
+                setTimeout(function() {
+                    iframe.src = videoSrc;
+                }, 100);
+            }, 500); // Duración de la animación fade-out
+        }
+
+        window.onclick = function (event) {
+            if (event.target == popup) {
+                popup.classList.remove('fade-in');
+                popup.classList.add('fade-out');
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    iframe.src = '';
+                    setTimeout(function() {
+                        iframe.src = videoSrc;
+                    }, 100);
+                }, 500); // Duración de la animación fade-out
+            }
+        }
+    });
+</script>
+
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .fade-out {
+        animation: fadeOut 0.5s ease-in-out;
+    }
+</style>
+
 					</div>
 		</div>
 					</div>
